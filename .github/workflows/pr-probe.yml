@@ -1,0 +1,7 @@
+name: pr-probe
+on: [pull_request]
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "c271 PR probe ran"
