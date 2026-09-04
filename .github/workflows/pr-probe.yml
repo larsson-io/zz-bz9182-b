@@ -4,4 +4,7 @@ jobs:
   probe:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "c271 PR probe ran"
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+      - run: bash ./ci.sh
